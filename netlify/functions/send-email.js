@@ -1,0 +1,44 @@
+const axios = require('axios');
+const cors = require('cors');
+
+exports.handler = async (event, context) => {
+  const { userId, toEmail, userEmail, level, systolicValue, diastolicValue, pulseValue, date, time } = JSON.parse(event.body);
+  
+  // Szablony wiadomości
+  const emailTemplates = [
+    `Alert! Hypotension detected!\nUser: ${userEmail}\nSystolic Pressure: ${systolicValue}\nDiastolic Pressure: ${diastolicValue}\nPulse: ${pulseValue}\nDate: ${date}\nTime: ${time}`,
+    `Alert! Prehypertension detected!\nUser: ${userEmail}\nSystolic Pressure: ${systolicValue}\nDiastolic Pressure: ${diastolicValue}\nPulse: ${pulseValue}\nDate: ${date}\nTime: ${time}`,
+    `Alert! Stage 1 Hypertension detected!\nUser: ${userEmail}\nSystolic Pressure: ${systolicValue}\nDiastolic Pressure: ${diastolicValue}\nPulse: ${pulseValue}\nDate: ${date}\nTime: ${time}`,
+    `Alert! Stage 2 Hypertension detected!\nUser: ${userEmail}\nSystolic Pressure: ${systolicValue}\nDiastolic Pressure: ${diastolicValue}\nPulse: ${pulseValue}\nDate: ${date}\nTime: ${time}`,
+    `Alert! Hypertensive Crisis detected!\nUser: ${userEmail}\nSystolic Pressure: ${systolicValue}\nDiastolic Pressure: ${diastolicValue}\nPulse: ${pulseValue}\nDate: ${date}\nTime: ${time}`,
+  ];
+
+  const emailContent = emailTemplates[level - 1] || "";
+
+  try {
+    const response = await axios.post('YOUR_API_ENDPOINT', {
+      from: {
+        email: 'alerts@bpmonitor.com',
+        name: 'Alerts',
+      },
+      to: [{ email: toEmail }],
+      subject: 'Blood Pressure Alert',
+      text: emailContent,
+    }, {
+      headers: {
+        Authorization: `Bearer YOUR_API_TOKEN`,
+        'Content-Type': 'application/json',
+      },
+    });
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify(response.data),
+    };
+  } catch (error) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: error.message }),
+    };
+  }
+};
