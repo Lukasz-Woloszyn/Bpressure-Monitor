@@ -1,5 +1,12 @@
-const axios = require('axios');
-const cors = require('cors');
+import axios from "axios";
+import cors from "cors";
+
+const apiToken = import.meta.env.API_TOKEN;
+const url = import.meta.env.API_URL;
+
+const corsHandler = cors({
+  origin: "https://bpmonitor.netlify.app", // Zamień na URL swojej aplikacji
+});
 
 exports.handler = async (event, context) => {
   const { userId, toEmail, userEmail, level, systolicValue, diastolicValue, pulseValue, date, time } = JSON.parse(event.body);
