@@ -160,3 +160,15 @@ body {
     font-size: 16px;
   }
 }
+
+@media (max-width: 431px) {
+  .stats-main {
+    margin-top: -30px;
+    margin-right: -60px;
+    margin-left: 0px;
+    transform: scale(0.7);
+  }
+  .stats-chart{
+    min-height: 230px;
+  }
+}
