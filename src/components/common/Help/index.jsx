@@ -24,7 +24,7 @@ export default function Help() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3001/send-contact-email",
+        "https://bpmonitor.netlify.app/send-contact-email",
         {
           message,
           userEmail,
