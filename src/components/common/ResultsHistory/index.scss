@@ -340,3 +340,16 @@ select:focus {
 .edit-form button.cancel-btn:hover {
   background-color: #e53935;
 }
+
+@media (max-width: 431px) {
+  .history-form {
+    margin-left: 60px;
+    transform: scale(0.35);
+    max-height: 100vh;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    max-width: 290px;
+  }
+
+
+}
