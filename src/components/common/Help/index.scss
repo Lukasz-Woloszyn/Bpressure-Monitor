@@ -61,6 +61,18 @@ body {
   width: 100%;
 }
 
+.classification-item-label {
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr 2fr;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
 .normal {
   background-color: rgb(0, 128, 0);
 }
@@ -194,24 +206,102 @@ body {
 }
 
 // ekrany mniejsze niż 499px
-@media (max-width: 499px) {
+@media (max-width: 431px) {
+  .help-form {
+    transform: scale();
+    max-width: 320px;
+    width: auto;
+    gap: 0px;
+    margin-left: 58px;
+  }
+  
+  .help-container {
+    padding: 6px;
+    border-radius: 5px;
+    height: 100vh;
+    
+  }
+  
+  .classification-container {
+    width: 100%;
+    gap: 0px;
+    margin-bottom: -17px;
+  }
+
   .classification-item {
-    padding: 8px;
-    font-size: 12px;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column; /* Układ pionowy dla całego kontenera */
+    padding: 5px;
+    border-radius: 0px;
   }
 
+  .classification-row {
+    display: flex;
+    flex-direction: row; /* Układ poziomy dla classification i ranges */
+    justify-content: space-between;
+    align-items: center;
+  }
+  .classification-item-label{
+    display: none;
+  }
+  .classification-item .classification,
   .classification-item .ranges {
-    font-size: 12px;
+    font-size: 10px;
+    font-weight: 700;
+  }
+  
+  .classification-item .ranges {
+    display: none;
   }
 
+  .classification-item .details {
+    font-size: 10px;
+    text-align: left;
+  }
+
+  .contact-container {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+  .contact-container h2 {
+    font-size: 16px;
+  }
+  
+  .contact-form {
+    margin-top: -20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    background-color: #dad4b5;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
   .contact-form input,
   .contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 12px;
+    background-color: rgb(32, 32, 32);
+    margin-top: 5px;
   }
-
+  
+  .contact-form textarea {
+    height: 50px;
+  }
+  
   .contact-form button {
+    background-color: #982b1c;
+    color: white;
+    padding: 5px 13px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     font-size: 12px;
-    padding: 6px 12px;
+    transition: background-color 0.3s ease;
   }
 }
