@@ -2,8 +2,11 @@
 
 ## Engineering Thesis
 **Title:** A web application facilitating the recording and analysis of blood pressure test results
+
 **University:** Cracow University of Technology - WIEIK 
+
 **Author:** Łukasz Wołoszyn 
+
 **Year:** 2024
 
 ## Main Features
