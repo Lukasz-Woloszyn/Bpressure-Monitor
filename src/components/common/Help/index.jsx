@@ -43,7 +43,7 @@ export default function Help() {
   return (
     <div className="help-container">
       <div className="classification-container">
-        <div className="classification-item label">
+        <div className="classification-item-label">
           <span>Classification</span>
           <span>SBP | DBP (mm Hg)</span>
           <span>Details</span>
