@@ -1,8 +1,3 @@
-import axios from "axios";
-
-const apiToken = import.meta.env.API_TOKEN;
-const url = import.meta.env.API_URL;
-
 const axios = require('axios');
 
 exports.handler = async (event) => {
