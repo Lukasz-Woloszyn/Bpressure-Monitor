@@ -68,6 +68,7 @@
 }
 
 @media (max-width: 431px) {
+  
   .bar-main {
     height: 100%;
     width: 58px;
@@ -103,17 +104,17 @@
   }
   .react-icons {
     cursor: pointer;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     color: #f2e8c6;
     width: 40px;
   }
   .icons-settings-bar {
     margin-bottom: 0px;
-    margin-top: auto;
+    //margin-top: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto;
+    //height: auto;
     width: 40px;
     //width: 55%;
     justify-content: flex-end;
@@ -122,6 +123,7 @@
   }
   
   .react-settings-icons {
+    margin-top: -4px;
     width: 40px;
     cursor: pointer;
     //bottom: 5px;
