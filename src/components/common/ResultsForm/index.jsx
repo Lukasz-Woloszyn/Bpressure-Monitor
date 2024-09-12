@@ -5,6 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../../firebaseConfig";
 import { formatDate } from "../../../helpers/formatDate";
 import { ToastContainer, toast } from "react-toastify";
+import pressureMonitor from '../../../assets/pressure_monitor.png';
 import "react-toastify/dist/ReactToastify.css";
 import "./index.scss";
 
@@ -149,7 +150,7 @@ export default function ResultsForm() {
             <h2>How to Read Your Blood Pressure</h2>
             <img
               className="instruction-image"
-              src="../../../src/assets/pressure_monitor.png"
+              src={pressureMonitor}
               alt="Instructions"
               style={{ marginBottom: "0px" }}
             />
