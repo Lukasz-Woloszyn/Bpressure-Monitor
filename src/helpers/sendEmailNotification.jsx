@@ -12,7 +12,7 @@ export const sendEmailNotification = async (
   date,
   time
 ) => {
-  const url = "http://localhost:3001/send-email"; // endpoint serwera
+  const url = "https://bpmonitor.netlify.app/send-email"; // endpoint serwera
 
   const emailData = {
     userId,
