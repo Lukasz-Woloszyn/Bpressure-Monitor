@@ -23,7 +23,7 @@ exports.handler = async (event, context) => {
   const emailContent = emailTemplates[level - 1] || "";
 
   try {
-    const response = await axios.post('YOUR_API_ENDPOINT', {
+    const response = await axios.post(url, {
       from: {
         email: 'alerts@bpmonitor.com',
         name: 'Alerts',
@@ -33,7 +33,7 @@ exports.handler = async (event, context) => {
       text: emailContent,
     }, {
       headers: {
-        Authorization: `Bearer YOUR_API_TOKEN`,
+        Authorization: `Bearer ${apiToken}`,
         'Content-Type': 'application/json',
       },
     });
