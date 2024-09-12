@@ -2,8 +2,8 @@ const axios = require('axios');
 
 exports.handler = async (event) => {
   const { userId, toEmail, userEmail, level, systolicValue, diastolicValue, pulseValue, date, time } = JSON.parse(event.body);
-  const apiToken = import.meta.env.API_TOKEN;
-  const url = import.meta.env.API_URL;
+  const apiToken = process.env.API_TOKEN;
+  const url = process.env.API_URL;
 
   const emailTemplates = [
     `Alert! Hypotension detected!\nUser: ${userEmail}\nSystolic Pressure: ${systolicValue}\nDiastolic Pressure: ${diastolicValue}\nPulse: ${pulseValue}\nDate: ${date}\nTime: ${time}`,
