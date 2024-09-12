@@ -133,6 +133,11 @@
   z-index: 1001;
 }
 
+.instruction-image {
+  width: 100%;
+  height: auto;
+}
+
 .close-btn {
   position: absolute;
   top: 10px;
@@ -314,11 +319,6 @@
     background-color: #9a746f;
   }
   
-  .form-main {
-    //width: 45%;
-    //min-width: 310px;
-  }
-  
   .modal-help-overlay {
     position: fixed;
     top: 0;
@@ -334,15 +334,24 @@
   
   .modal-help-content {
     background-color: #f2e8c6;
-    margin-left: 20px;
+    margin-left: 0px;
     padding: 20px;
     border-radius: 8px;
-    max-width: 500px;
-    width: 450px;
+    //max-width: 250px;
+    width: 260px;
     position: relative;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 1001;
+    font-size: 11px;
+    text-align: center;
   }
+  .modal-help-content h2 {
+    font-size: 14px;
+
+  }
+  .instruction-image {
+    width: 80%;
+    height: auto;
   
   .close-btn {
     position: absolute;
@@ -379,4 +388,5 @@
   .instructions-text {
     text-align: left;
   }
+}
 }
