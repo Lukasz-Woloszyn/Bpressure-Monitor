@@ -16,7 +16,7 @@ import { auth } from "../../../firebaseConfig";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Modal from "../modal";
+import Modal from "../Modal";
 import "./index.scss";
 
 export default function User() {
