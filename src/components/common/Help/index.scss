@@ -223,6 +223,7 @@ body {
   }
   
   .classification-container {
+    margin-top: 10px;
     width: 100%;
     gap: 0px;
     margin-bottom: -17px;
@@ -269,7 +270,7 @@ body {
   }
   
   .contact-form {
-    margin-top: -20px;
+    margin-top: -28px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -300,6 +301,7 @@ body {
     padding: 5px 13px;
     border: none;
     border-radius: 4px;
+    margin-top: -6px;
     cursor: pointer;
     font-size: 12px;
     transition: background-color 0.3s ease;
