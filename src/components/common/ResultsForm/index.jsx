@@ -148,9 +148,10 @@ export default function ResultsForm() {
             </span>
             <h2>How to Read Your Blood Pressure</h2>
             <img
-              src="src\assets\pressure_monitor.png"
+              className="instruction-image"
+              src="../../../src/assets/pressure_monitor.png"
               alt="Instructions"
-              style={{ width: "100%", marginBottom: "0px" }}
+              style={{ marginBottom: "0px" }}
             />
             <div className="instructions-text">
               <p>
