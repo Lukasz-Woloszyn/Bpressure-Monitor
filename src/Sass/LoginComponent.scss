@@ -197,3 +197,23 @@ body {
 .reset-send:hover {
   background-color: #7e251b;
 }
+
+@media (max-width: 431px) {
+  .login-wrapper {
+    transform: scale(0.75);
+  }
+
+  .login-btn {
+    width: 180px;
+    margin-top: 0px;
+    //margin-left: 80px;
+    color: white;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+  }
+  .reset-modal {
+
+    background-color: rgba(0, 0, 0, 0.0);
+
+  }
+}
