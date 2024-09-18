@@ -25,6 +25,13 @@
 
 ## Getting Started
 
+### Netlify
+For now application is deployed on Netlify server. 
+If you want to run this code locally:
+- Replace your enviroment variables: App Tokens, Mailtrap API Token, Mailtrap Endpoint URL (src/firebaseConfig.js; netlify/functions/send-contact-email.js, send-email.js).
+- Change your POST URL to local in src/components/common/Help/index.jsx: line 22
+- Change your POST URL to local in src/helpers/sendEmailNotification.jsx: line 15
+
 ### Frontend
 
 1. Clone the repository:
@@ -47,7 +54,7 @@
     npm run build
     ```
 
-### Backend
+### Backend LOCAL
 
 To run the email server:
 
@@ -65,6 +72,8 @@ To run the email server:
     ```bash
     node server.js
     ```
+
+
 
 ## Vite + React Plugins
 
