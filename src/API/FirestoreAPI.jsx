@@ -19,7 +19,6 @@ import { getAuth } from "firebase/auth";
 import { sendEmailNotification } from "../helpers/sendEmailNotification";
 import { toast } from "react-toastify";
 
-//vvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 const getUserResultsRef = (userId) => {
   return collection(firestore, "users", userId, "results");
 };
@@ -27,7 +26,6 @@ const getUserResultsRef = (userId) => {
 // Funkcja do usuwania wyniku
 export const deleteResult = async (userId, resultId) => {
   try {
-    // Sprawdzenie, czy resultId jest prawidłowy
     if (!resultId) {
       throw new Error("Invalid result ID");
     }
@@ -38,10 +36,10 @@ export const deleteResult = async (userId, resultId) => {
     await deleteDoc(resultDocRef);
 
     console.log("Result deleted successfully");
-    return true; // Możesz zwrócić wartość informującą o powodzeniu operacji
+    return true;
   } catch (error) {
     console.error("Error deleting result: ", error);
-    return false; // Możesz zwrócić wartość informującą o niepowodzeniu operacji
+    return false;
   }
 };
 
@@ -133,10 +131,10 @@ export const postResults = async (
       }
     }
 
-    return true; // Możesz zwrócić coś, co poinformuje, że zapisywanie się powiodło
+    return true;
   } catch (error) {
     console.error("Error saving stats to Firebase: ", error);
-    return false; // Możesz zwrócić coś, co poinformuje, że zapisywanie się nie powiodło
+    return false;
   }
 };
 
@@ -155,29 +153,17 @@ export const getResults = (userId, setAllResults) => {
   });
 };
 
-// chatVVVVVVVVVVVVV
+
 
 const usersCollection = collection(firestore, "users");
-//W users
-/* export const saveUserData = async (userId, data) => {
-  try {
-    const userDocRef = doc(usersCollection, userId);
-    await setDoc(userDocRef, data);
-    console.log("User data saved!");
-    return true;
-  } catch (error) {
-    console.error('Error saving user data to Firestore: ', error);
-    return false;
-  }
-}; */
+
 
 // Kolekcja 'user_data'
 export const saveUserTableEntry = async (userId, entryData) => {
   try {
-    // Tworzymy referencję do kolekcji "user_table" dla danego użytkownika
     const userDataTableRef = collection(usersCollection, userId, "Results");
 
-    // Dodajemy nowy dokument, a Firestore automatycznie wygeneruje unikalny identyfikator
+    // Firestore automatycznie generuje unikalny identyfikator
     await addDoc(userDataTableRef, entryData);
 
     console.log("User table entry saved!");
@@ -208,10 +194,8 @@ export const getUserTableData = (userId, setUserTableData) => {
 
 export const updateResult = async (userId, resultId, updatedData) => {
   try {
-    // Tworzymy referencję do konkretnego dokumentu
     const resultDocRef = doc(firestore, "users", userId, "results", resultId);
 
-    // Zaktualizuj dokument
     await updateDoc(resultDocRef, updatedData);
     console.log("Document updated successfully!");
     return true;
@@ -243,8 +227,6 @@ export const getResultsWithinRange = async (userId, startDate, endDate) => {
     throw error;
   }
 };
-
-//USER
 
 // Funkcja do usuwania całej historii wyników użytkownika
 export const deleteResultHistory = async (userId) => {
@@ -288,7 +270,7 @@ export const getUserSupportEmail = async (userId) => {
     if (userDoc.exists()) {
       // Pobranie pola supportEmail z dokumentu
       const userData = userDoc.data();
-      return userData.supportEmail || "someone@example.com"; // Zwrócenie emaila lub domyślnego wartości
+      return userData.supportEmail || "someone@example.com";
     } else {
       console.error("User document does not exist");
       return "someone@example.com"; // Jeśli dokument nie istnieje, zwracamy domyślny email
