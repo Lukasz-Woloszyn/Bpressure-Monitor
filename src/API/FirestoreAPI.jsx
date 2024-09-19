@@ -29,7 +29,7 @@ export const deleteResult = async (userId, resultId) => {
     if (!resultId) {
       throw new Error("Invalid result ID");
     }
-    // Utworzenie referencji do dokumentu, który chcemy usunąć
+    // Utworzenie referencji do dokumentu do usunięcia
     const resultDocRef = doc(getUserResultsRef(userId), resultId);
 
     // Usunięcie dokumentu z Firestore
