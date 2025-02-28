@@ -28,7 +28,7 @@
 ### Netlify
 For now application is deployed on Netlify server. 
 If you want to run this code locally:
-- Replace your enviroment variables: App Tokens, Mailtrap API Token, Mailtrap Endpoint URL (src/firebaseConfig.js; netlify/functions/send-contact-email.js, send-email.js).
+- Replace your environment variables: App Tokens, Mailtrap API Token, Mailtrap Endpoint URL (src/firebaseConfig.js; netlify/functions/send-contact-email.js, send-email.js).
 - Change your POST URL to local in src/components/common/Help/index.jsx: line 22
 - Change your POST URL to local in src/helpers/sendEmailNotification.jsx: line 15
 
