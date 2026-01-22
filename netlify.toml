@@ -1,0 +1,12 @@
+[build]
+  publish = "dist" # Katalog z plikami statycznymi, które Netlify ma serwować
+  functions = "netlify/functions" # Katalog z funkcjami Netlify
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
+  
+[functions]
+  node_bundler = "esbuild"

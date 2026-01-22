@@ -1,0 +1,132 @@
+.bar-main {
+  height: 100%;
+  width: 80px;
+  background-color: #800000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  //height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1200;
+}
+
+.logo-bar {
+  /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+  //width: 100vh;
+  margin-top: 8px;
+  width: 80px;
+  cursor: pointer;
+}
+
+.icons-bar {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  //height: 80%;
+  //width: 55%;
+  gap: 10px;
+  //justify-content: space-between;
+}
+
+.react-icons {
+  cursor: pointer;
+  margin-bottom: 15px;
+  color: #f2e8c6;
+}
+
+.react-icons:hover {
+  color: rgb(252, 252, 252);
+}
+
+.icons-settings-bar {
+  margin-bottom: 10px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+  //width: 55%;
+  justify-content: flex-end;
+  gap: 10px;
+  //justify-content: space-between;
+}
+
+.react-settings-icons {
+  cursor: pointer;
+  //bottom: 5px;
+  color: #f2e8c6;
+}
+
+.react-settings-icons:hover {
+  color: rgb(252, 252, 252);
+}
+
+@media (max-width: 431px) {
+  
+  .bar-main {
+    height: 100%;
+    width: 58px;
+    background-color: #800000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    //height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1200;
+  }
+  .logo-bar {
+    /* display: flex;
+      flex-direction: column;
+      align-items: center; */
+    //width: 100vh;
+    margin-top: 8px;
+    width: 59px;
+    cursor: pointer;
+  }
+  .icons-bar {
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    //height: 80%;
+    //width: 55%;
+    gap: 0px;
+    //justify-content: space-between;
+  }
+  .react-icons {
+    cursor: pointer;
+    margin-bottom: 0px;
+    color: #f2e8c6;
+    width: 40px;
+  }
+  .icons-settings-bar {
+    margin-bottom: 0px;
+    //margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //height: auto;
+    width: 40px;
+    //width: 55%;
+    justify-content: flex-end;
+    gap: 0px;
+    //justify-content: space-between;
+  }
+  
+  .react-settings-icons {
+    margin-top: -4px;
+    width: 40px;
+    cursor: pointer;
+    //bottom: 5px;
+    color: #f2e8c6;
+  }
+}
